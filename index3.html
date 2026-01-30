@@ -1,0 +1,1349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PISAYIAN | PSHS International Alumni Foundation</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      /* --- CSS VARIABLES --- */
+      :root {
+        --pisay-blue: #0038a8;
+        --pisay-red: #ce1126;
+        --pisay-yellow: #fcd116;
+        --pisay-white: #ffffff;
+        --pisay-gray: #f8f9fa;
+        --text-dark: #2c3e50;
+        --text-light: #596a7d;
+        --border-color: #e0e0e0;
+        --header-height: 85px;
+      }
+
+      /* --- RESET & BASE --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--text-dark);
+        background-color: var(--pisay-white);
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        color: var(--pisay-blue);
+        font-weight: 700;
+      }
+
+      a {
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+      }
+
+      /* --- BUTTONS --- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 28px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+
+      .btn-red {
+        background-color: var(--pisay-red);
+        color: white;
+      }
+      .btn-red:hover {
+        background-color: #a30e1e;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        border-color: var(--pisay-blue);
+        color: var(--pisay-blue);
+      }
+      .btn-outline:hover {
+        background: var(--pisay-blue);
+        color: white;
+      }
+
+      .btn-link {
+        color: var(--pisay-blue);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border-bottom: 2px solid transparent;
+      }
+      .btn-link:hover {
+        border-bottom: 2px solid var(--pisay-blue);
+      }
+
+      /* --- HEADER STYLES --- */
+      header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        background-color: var(--pisay-white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        border-bottom: 4px solid var(--pisay-blue);
+      }
+
+      header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo img {
+        height: 70px;
+        width: auto;
+      }
+
+      .logo-text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        font-size: 1.4rem;
+        color: var(--pisay-blue);
+        line-height: 1;
+      }
+
+      .logo-text span {
+        display: block;
+        font-size: 0.55rem;
+        font-weight: 600;
+        color: var(--text-light);
+        text-transform: uppercase;
+        margin-top: 2px;
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+      .nav-links a {
+        color: var(--text-dark);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+      .nav-links a:hover {
+        color: var(--pisay-blue);
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        border-left: 1px solid var(--border-color);
+        padding-left: 20px;
+      }
+
+      /* --- HERO SECTION --- */
+      .hero-angled {
+        position: relative;
+        height: 90vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+          url(school-image2.jpg) left bottom/ 130% no-repeat;
+
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-top: var(--header-height);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          105deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 40%,
+          rgba(255, 255, 255, 0.7) 70%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-content-original {
+        position: relative;
+        z-index: 2;
+        width: 55%;
+        color: var(--text-dark);
+      }
+
+      .hero-content-original h1 {
+        font-size: 3.2rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        font-weight: 900;
+        color: var(--pisay-blue);
+      }
+
+      .hero-content-original p {
+        font-size: 1.1rem;
+        margin-bottom: 35px;
+        color: var(--text-light);
+        max-width: 90%;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn-member {
+        background-color: var(--pisay-red);
+        color: white;
+        padding: 14px 35px;
+        box-shadow: 0 4px 10px rgba(0, 56, 168, 0.2);
+        border-radius: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      .btn-member:hover {
+        background-color: #700000;
+        transform: translateY(-2px);
+      }
+
+      .btn-read {
+        background-color: transparent;
+        color: var(--pisay-blue);
+        border: 2px solid var(--pisay-blue);
+        padding: 12px 33px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      .btn-read:hover {
+        background-color: var(--pisay-blue);
+        color: white;
+      }
+
+      .btn-hero-solid {
+        background-color: var(--pisay-blue);
+        color: white;
+        padding: 14px 35px;
+        box-shadow: 0 4px 10px rgba(0, 56, 168, 0.2);
+        border-radius: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      .btn-hero-solid:hover {
+        background-color: #002570;
+        transform: translateY(-2px);
+      }
+
+      .btn-hero-outline {
+        background-color: transparent;
+        color: var(--pisay-red);
+        border: 2px solid var(--pisay-red);
+        padding: 12px 33px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      .btn-hero-outline:hover {
+        background-color: var(--pisay-red);
+        color: white;
+      }
+
+      /* --- SECTIONS CSS --- */
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .bg-gray {
+        background-color: var(--pisay-gray);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--pisay-yellow);
+        margin: 10px auto 0;
+      }
+
+      .section-subtitle {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        color: var(--text-light);
+      }
+
+      /* About Section */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .about-image-box img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Programs Grid */
+      .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .program-card {
+        background: white;
+        padding: 35px 25px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        border-top: 4px solid var(--pisay-blue);
+      }
+
+      .program-icon {
+        font-size: 2rem;
+        color: var(--pisay-red);
+        margin-bottom: 20px;
+      }
+
+      .program-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        color: var(--text-dark);
+      }
+
+      .program-card p {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        margin-bottom: 20px;
+      }
+
+      /* Metrics Section */
+      .metrics-section {
+        background-color: var(--pisay-blue);
+        color: white;
+        padding: 60px 0;
+      }
+
+      .metrics-grid {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .metric-item h2 {
+        color: var(--pisay-yellow);
+        font-size: 3.5rem;
+        margin-bottom: 5px;
+        font-weight: 800;
+      }
+
+      .metric-item p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      /* Carousel */
+      .carousel-wrapper {
+        position: relative;
+        padding: 0 20px;
+      }
+
+      .carousel-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 25px;
+        padding-bottom: 30px;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .carousel-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .story-card {
+        flex: 0 0 350px;
+        scroll-snap-align: start;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #eee;
+      }
+
+      .story-img {
+        height: 200px;
+        width: 100%;
+        background-color: #ddd;
+        object-fit: cover;
+      }
+
+      .story-content {
+        padding: 25px;
+      }
+
+      .story-tag {
+        background-color: #e3f2fd;
+        color: var(--pisay-blue);
+        padding: 4px 10px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 12px;
+      }
+
+      .quote {
+        font-style: italic;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+
+      /* Carousel Buttons */
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid #ddd;
+        color: var(--pisay-blue);
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+
+      .carousel-btn:hover {
+        background-color: var(--pisay-blue);
+        color: white;
+        border-color: var(--pisay-blue);
+      }
+
+      .prev-btn {
+        left: -20px;
+      }
+      .next-btn {
+        right: -20px;
+      }
+
+      /* --- EVENTS SECTION (UPDATED) --- */
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .event-card {
+        display: flex;
+        flex-direction: column; /* Stacks image on top of details */
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        transition: transform 0.3s ease;
+      }
+
+      .event-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* New Image Container */
+      .event-image {
+        width: 100%;
+        height: 180px; /* Fixed height for uniformity */
+        position: relative;
+      }
+
+      .event-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures image fills box without stretching */
+      }
+
+      /* Details Section */
+      .event-details {
+        padding: 25px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* New Date Style inside details */
+      .event-date-inline {
+        color: var(--pisay-red);
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .event-details h4 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: var(--text-dark);
+      }
+
+      .event-meta {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .event-meta span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* Remove old media query logic that is no longer needed */
+      /* CTA Banner */
+      .cta-banner {
+        background: linear-gradient(to right, var(--pisay-blue), #1a4db3);
+        padding: 80px 0;
+        text-align: center;
+        color: white;
+      }
+
+      .cta-banner h2 {
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .cta-banner p {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .btn-white {
+        background-color: white;
+        color: var(--pisay-blue);
+      }
+      .btn-white:hover {
+        background-color: var(--pisay-yellow);
+        color: var(--pisay-blue);
+      }
+
+      /* --- FOOTER STYLES --- */
+      .main-footer {
+        /* UPDATED FOOTER COLOR HERE */
+        background-color: var(--text-dark); /* Using #2c3e50 */
+        color: #ddd; /* Lightened text for better contrast */
+        padding: 70px 0 20px;
+        font-size: 0.9rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .footer-col h4 {
+        color: var(--pisay-white);
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .footer-about p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+        color: #cbd5e0;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: #cbd5e0;
+        transition: 0.3s;
+        display: inline-block;
+      }
+
+      .footer-links a:hover {
+        color: var(--pisay-yellow);
+        transform: translateX(5px);
+      }
+
+      .footer-contact li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 15px;
+        color: #cbd5e0;
+      }
+
+      .footer-contact i {
+        color: var(--pisay-blue);
+        background: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        margin-top: 3px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+      }
+
+      .social-links a:hover {
+        background-color: var(--pisay-blue);
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .footer-bottom-links a {
+        color: #888;
+        margin-left: 20px;
+        font-size: 0.8rem;
+      }
+
+      .footer-bottom-links a:hover {
+        color: white;
+      }
+
+      /* --- RESPONSIVE --- */
+      @media (max-width: 1024px) {
+        .nav-links {
+          display: none;
+        }
+        .programs-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero-angled {
+          height: auto;
+          padding: 80px 0;
+        }
+        .hero-overlay {
+          background: rgba(255, 255, 255, 0.92);
+        }
+        .hero-content-original {
+          width: 100%;
+          text-align: center;
+        }
+        .hero-content-original h1 {
+          font-size: 2.4rem;
+        }
+        .hero-btns {
+          justify-content: center;
+        }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer-bottom {
+          justify-content: center;
+          text-align: center;
+        }
+        .footer-bottom-links {
+          margin-top: 10px;
+        }
+        .footer-bottom-links a {
+          margin: 0 10px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-actions a[href="#donate"] {
+          display: none;
+        }
+        .programs-grid {
+          grid-template-columns: 1fr;
+        }
+        .event-card {
+          flex-direction: column;
+        }
+        .event-date {
+          width: 100%;
+          flex-direction: row;
+          gap: 10px;
+          padding: 10px;
+        }
+        .event-date .day {
+          font-size: 1.2rem;
+        }
+
+        .carousel-btn {
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+        .prev-btn {
+          left: -10px;
+        }
+        .next-btn {
+          right: -10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Pisayian Logo" />
+          <img src="text-logo.png" alt=""  style="height: 2.5rem;">
+        </a>
+
+        <div class="header-right">
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#community">Community</a></li>
+              <li><a href="#events">Events</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <a
+              href="#donate"
+              style="
+                color: var(--text-dark);
+                font-weight: 700;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                margin-right: 10px;
+              "
+              >Donate</a
+            >
+            <a href="#login" class="btn btn-outline" style="padding: 8px 16px"
+              >Login</a
+            >
+            <a href="#join" class="btn btn-red" style="padding: 8px 16px"
+              >Join</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-angled">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content-original">
+          <span
+            style="
+              color: #c5a005;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              font-size: 0.85rem;
+              margin-bottom: 15px;
+              display: block;
+            "
+            >Service Through Excellence</span
+          >
+          <h1>Pisay Alumni, <br />United Worldwide.</h1>
+          <p>
+            We are the global community of Philippine Science High School
+            alumni. Dedicated to advancing STEM education, funding research, and
+            creating a legacy of service for the next generation of scholars.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#join" class="btn-member">Become a Member</a>
+            <a href="#mission" class="btn-read">Read Our Mission</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="about-grid">
+          <div >
+            <h2 class="section-title">Who We Are</h2>
+            <p style="margin-bottom: 15px; color: var(--text-light)">
+              Driven by the need to support STEM education in the Philippines
+              and to foster fellowship among alumni across the world, a group of
+              alumni of the Philippine Science High School (PSHS) based in North
+              America established a nonprofit organization called the
+              <strong
+                >Philippine Science High School (PSHS) International Alumni
+                Foundation, Inc., </strong
+              >also known as "Pisayian". Pisayian is a nonprofit organization
+              recognized by the IRS under section 501(c)(3).
+            </p>
+            <p style="margin-bottom: 15px; color: var(--text-light)">
+              Membership is open to alumni from any campus of the PSHS system
+              who are either currently or formerly based in North America.
+            </p>
+            <a href="#learn-more" class="btn-link" style="color: var(--pisay-red)"
+              >Read our History <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="about-image-box">
+            <img src="hero-reunion.jpg" alt="Pisay Community" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <h2>450+</h2>
+            <p>Scholars Supported</p>
+          </div>
+          <div class="metric-item">
+            <h2>3,200</h2>
+            <p>Alumni Reached</p>
+          </div>
+          <div class="metric-item">
+            <h2>$500k</h2>
+            <p>Funds Raised</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="section-padding bg-gray">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">Our Programs</h2>
+          <p class="section-subtitle">
+            We empower the next generation of scientists and engineers through
+            grants, scholarships, and mentorship.
+          </p>
+        </div>
+
+        <div class="programs-grid">
+          <div class="program-card">
+            <i class="fas fa-hand-holding-dollar program-icon"></i>
+            <h3>Program Grants</h3>
+            <p>
+              Pisayian distributes small grants to organizations like the PSHS
+              system, PSHSNAA, and PSHSFI for implementing programs aligned with
+              our mission.
+            </p>
+            <a href="#contact" class="btn-link">Contact Us</a>
+          </div>
+
+          <div class="program-card">
+            <i class="fas fa-graduation-cap program-icon"></i>
+            <h3>Scholarship Grants</h3>
+            <p>
+              Merit or need-based support for tuition, living expenses,
+              competition expenses, and professional development for students
+              and alumni.
+            </p>
+            <a href="#contact" class="btn-link">Apply Now</a>
+          </div>
+
+          <div class="program-card">
+            <i class="fas fa-network-wired program-icon"></i>
+            <h3>Pisay Network</h3>
+            <p>
+              An exclusive online platform for alumni to network, find jobs,
+              post events, join affinity groups, and attend monthly talk series.
+            </p>
+            <a href="#network" class="btn-link">Join Pisay Network</a>
+          </div>
+
+          <div class="program-card">
+            <i class="fas fa-users program-icon"></i>
+            <h3>Mentoring</h3>
+            <p>
+              Connect with over 200 alumni mentors. Find guidance by job
+              function, industry, or location through the Pisay Network
+              platform.
+            </p>
+            <a href="#pisaynet" class="btn-link">Go to PisayNet</a>
+          </div>
+
+          <div class="program-card">
+            <i class="fas fa-flask program-icon"></i>
+            <h3>Research Science Institute</h3>
+            <p>
+              We collaborate with CEE to send a current PSHS junior to the
+              prestigious six-week RSI program at MIT every summer.
+            </p>
+            <a href="#contact" class="btn-link">Learn More</a>
+          </div>
+
+          <div class="program-card">
+            <i class="fas fa-globe-asia program-icon"></i>
+            <h3>International Olympiads</h3>
+            <p>
+              Supporting students representing the Philippines in global STEM
+              competitions (Biology, Math, Physics, ISEF, etc).
+            </p>
+            <a href="#donate" class="btn-link">Support a Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="section-padding">
+      <div class="container text-center">
+        <h2 class="section-title">Alumni Perspectives</h2>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev-btn" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel-container" id="carousel">
+            <div class="story-card">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                alt="Alumni"
+                class="story-img"
+              />
+              <div class="story-content">
+                <span class="story-tag">Main Campus '98</span>
+                <h4 style="margin-bottom: 5px">Dr. Elena Rivera</h4>
+                <p style="font-size: 0.85rem; color: #777; margin-bottom: 10px">
+                  Biotech Innovator, Boston
+                </p>
+                <p class="quote">
+                  "The foundation's grant allowed my lab to partner with
+                  students in Diliman for ground-breaking research."
+                </p>
+                <a href="#" class="btn-link">Read Story</a>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
+                alt="Alumni"
+                class="story-img"
+              />
+              <div class="story-content">
+                <span class="story-tag">Cebu Campus '05</span>
+                <h4 style="margin-bottom: 5px">Engr. Mark Tan</h4>
+                <p style="font-size: 0.85rem; color: #777; margin-bottom: 10px">
+                  Renewable Energy, California
+                </p>
+                <p class="quote">
+                  "Pisay Network helped me find my first mentor in Silicon
+                  Valley. Now, I'm paying it forward."
+                </p>
+                <a href="#" class="btn-link">Read Story</a>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop"
+                alt="Alumni"
+                class="story-img"
+              />
+              <div class="story-content">
+                <span class="story-tag">Davao Campus '12</span>
+                <h4 style="margin-bottom: 5px">Sarah Mendez</h4>
+                <p style="font-size: 0.85rem; color: #777; margin-bottom: 10px">
+                  Data Scientist, Toronto
+                </p>
+                <p class="quote">
+                  "The scholarship I received for the Math Olympiad changed the
+                  trajectory of my career."
+                </p>
+                <a href="#" class="btn-link">Read Story</a>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                alt="Alumni"
+                class="story-img"
+              />
+              <div class="story-content">
+                <span class="story-tag">Iloilo Campus '90</span>
+                <h4 style="margin-bottom: 5px">Roberto Cruz</h4>
+                <p style="font-size: 0.85rem; color: #777; margin-bottom: 10px">
+                  Educator, New York
+                </p>
+                <p class="quote">
+                  "Volunteering for the board gave me a way to reconnect with
+                  home while living abroad."
+                </p>
+                <a href="#" class="btn-link">Read Story</a>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn next-btn" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="events" class="section-padding bg-gray">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+          "
+        >
+          <h2 class="section-title" style="margin-bottom: 0">
+            Upcoming Events
+          </h2>
+          <a href="#" class="btn btn-outline">View All</a>
+        </div>
+
+        <div class="events-grid">
+          <!-- Event 1 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="1.avif" alt="Valentine's Day Ping Pong Social Boston" />
+            </div>
+            <div class="event-details">
+              <span class="event-date-inline">Feb 14, 2026 • 2:00–5:00 PM</span>
+              <h4>Valentine's Day Ping Pong Social Boston</h4>
+              <div class="event-meta">
+                <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                  SPIN Boston, MA
+                </span>
+                <span>
+                  <i class="fas fa-table-tennis"></i>
+                  Social Event
+                </span>
+              </div>
+              <a
+                href="#"
+                style="
+                  font-size: 0.85rem;
+                  font-weight: 700;
+                  color: var(--pisay-blue);
+                  margin-top: auto;
+                "
+              >
+                Get Tickets &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="2.avif" alt="Table Tennis FUNdraiser NYC" />
+            </div>
+            <div class="event-details">
+              <span class="event-date-inline">Nov 08, 2025 • 2:30–5:30 PM</span>
+              <h4>Table Tennis FUNdraiser NYC</h4>
+              <div class="event-meta">
+                <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                  SPIN New York Flatiron
+                </span>
+                <span>
+                  <i class="fas fa-hand-holding-heart"></i>
+                  Fundraiser
+                </span>
+              </div>
+              <a
+                href="#"
+                style="
+                  font-size: 0.85rem;
+                  font-weight: 700;
+                  color: var(--pisay-blue);
+                  margin-top: auto;
+                "
+              >
+                View Details &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="3.jpg" alt="1sang Pisay 2025 Hartford" />
+            </div>
+            <div class="event-details">
+              <span class="event-date-inline">Oct 11, 2025 • 3:00 PM</span>
+              <h4>1sang Pisay 2025 Hartford</h4>
+              <div class="event-meta">
+                <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                  Hartford, CT
+                </span>
+                <span>
+                  <i class="fas fa-users"></i>
+                  Alumni Gathering
+                </span>
+              </div>
+              <a
+                href="#"
+                style="
+                  font-size: 0.85rem;
+                  font-weight: 700;
+                  color: var(--pisay-blue);
+                  margin-top: auto;
+                "
+              >
+                View Details &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="donate" class="cta-banner">
+      <div class="container">
+        <h2>Join the Pisayian Community</h2>
+        <p>
+          Connect with fellow alumni, support the next generation of scholars,
+          and make a lasting impact.
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-white">Become a Member</a>
+          <a
+            href="#"
+            class="btn"
+            style="
+              background-color: var(--pisay-yellow);
+              color: var(--pisay-blue);
+            "
+            >Donate Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col footer-about">
+            <a href="#" class="logo" style="margin-bottom: 15px; display: flex; flex-direction: column; gap: 0;">
+              <img src="logo.png" alt="Logo" style="height: 100px" />
+              <img src="text-white.png" alt="" style="height: 30px">
+            </a>
+            <p>
+              Dedicated to advancing STEM education and creating a legacy of
+              service for the next generation of Filipino scholars.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#programs">Programs & Grants</a></li>
+              <li><a href="#events">Upcoming Events</a></li>
+              <li><a href="#news">Membership</a></li>
+              <li><a href="#contact">Donate</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-links">
+            <h4>Get Involved</h4>
+            <ul>
+              <li><a href="#join">Become a Member</a></li>
+              <li><a href="#volunteer">Volunteer</a></li>
+              <li><a href="#network">Pisay Network</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-contact">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>123 Science Avenue,<br />Innovation City, NY 10012</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>info@pisayian.org</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>+1 (555) 123-4567</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 PSHS International Alumni Foundation, Inc. All rights
+            reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      // Scroll amount: width of card (350) + gap (25) = 375
+      const scrollAmount = 375;
+
+      nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
+      });
+
+      prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({
+          left: -scrollAmount,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

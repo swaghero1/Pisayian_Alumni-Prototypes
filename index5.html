@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PISAYIAN | PSHS International Alumni Foundation</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* --- CSS VARIABLES --- */
+      :root {
+        --pisay-blue: #0038a8;
+        --pisay-dark-blue: #002570;
+        --pisay-red: #ce1126;
+        --pisay-gold: #b38b00;
+        --pisay-yellow: #fcd116;
+        --pisay-white: #ffffff;
+        --pisay-gray: #f8f9fa;
+        --pisay-light-blue: #eef2f6;
+        --text-dark: #2c3e50;
+        --text-light: #596a7d;
+        --border-color: #e0e0e0;
+        --header-height: 85px;
+        --container-width: 1200px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--text-dark);
+        background-color: var(--pisay-white);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* --- TYPOGRAPHY --- */
+      h1, h2, h3, h4, h5 {
+        font-family: "Merriweather", serif;
+        color: var(--pisay-blue);
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      p {
+        margin-bottom: 1.2rem;
+      }
+
+      .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 30px;
+      }
+
+      /* --- BUTTONS --- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 28px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn-red {
+        background-color: var(--pisay-red);
+        color: white;
+      }
+      .btn-red:hover {
+        background-color: #a30e1e;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        border-color: var(--pisay-blue);
+        color: var(--pisay-blue);
+        background: transparent;
+      }
+      .btn-outline:hover {
+        background: var(--pisay-blue);
+        color: white;
+      }
+
+      .btn-white {
+        background-color: white;
+        color: var(--pisay-blue);
+      }
+      .btn-white:hover {
+        background-color: var(--pisay-gray);
+      }
+
+      .btn-gold {
+        background-color: var(--pisay-gold);
+        color: white;
+      }
+      .btn-gold:hover {
+        background-color: #947200;
+      }
+
+      .btn-link {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        color: var(--pisay-blue);
+      }
+      .btn-link:hover {
+        text-decoration: underline;
+      }
+
+      /* --- HEADER STYLES --- */
+      header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        background-color: var(--pisay-white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        border-bottom: 4px solid var(--pisay-blue);
+      }
+
+      header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 24px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+      .logo img {
+        height: 70px;
+        width: auto;
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--text-dark);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: none;
+        letter-spacing: normal;
+      }
+      .nav-links a:hover {
+        color: var(--pisay-blue);
+        text-decoration: none;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        border-left: 1px solid var(--border-color);
+        padding-left: 20px;
+      }
+
+      /* --- HERO SECTION --- */
+      .hero {
+        margin-top: var(--header-height);
+        background-color: #f8f9fa;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        min-height: 400px;
+        width: 100%;
+      }
+
+      .hero-text-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 70px 0px 65px 110px;
+      }
+
+      .eyebrow {
+        color: var(--pisay-gold);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        color: var(--pisay-blue);
+        max-width: 600px;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        color: var(--text-light);
+        margin-bottom: 35px;
+        max-width: 550px;
+      }
+
+      .hero-reunion-real {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 63% center;
+        display: block;
+      }
+
+      /* --- SECTION STYLES --- */
+      section {
+        padding: 100px 0; /* More whitespace for academic feel */
+      }
+      .hero {
+        padding: 0;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      .divider {
+        width: 80px;
+        height: 2px;
+        background: var(--pisay-gold);
+        margin: 0 auto 50px;
+      }
+      .section-subtitle {
+        text-align: center;
+        max-width: 700px;
+        margin: -30px auto 60px;
+        color: var(--text-light);
+        font-size: 1.05rem;
+        font-style: italic;
+        font-family: "Merriweather", serif;
+      }
+
+      /* --- ABOUT --- */
+      .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 20px 80px;
+      }
+      .about-image {
+        width: 100%;
+        aspect-ratio: 6 / 3;
+        background-color: #eee;
+        border: 1px solid var(--border-color);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* --- METRICS --- */
+      .impact-metrics {
+        background-color: var(--pisay-blue);
+        color: white;
+        padding: 60px 0;
+        border-top: 4px solid var(--pisay-gold);
+        border-bottom: 4px solid var(--pisay-gold);
+      }
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+      }
+      .metric-item {
+        text-align: center;
+        padding: 0 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .metric-item:last-child {
+        border-right: none;
+      }
+      .metric-item h2 {
+        color: var(--pisay-white);
+        font-size: 3rem;
+        margin-bottom: 5px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .metric-item p {
+        color: var(--pisay-gray);
+        font-family: "Merriweather", serif;
+        font-style: italic;
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      /* --- PROGRAMS --- */
+      .bg-gray {
+        background-color: var(--pisay-gray);
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+      }
+      .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+      }
+      .program-card {
+        background: white;
+        padding: 35px;
+        border: 1px solid var(--border-color);
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+      }
+      .program-card:hover {
+        border-color: var(--pisay-blue);
+      }
+      .icon-label {
+        color: var(--pisay-red);
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      .program-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+      .program-card p,
+      .program-card li {
+        font-size: 0.95rem;
+        color: var(--text-light);
+      }
+      .card-link {
+        margin-top: auto;
+        padding-top: 20px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: var(--pisay-blue);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
+      .card-link:hover {
+        text-decoration: underline;
+      }
+
+      /* --- NEW ALUMNI PERSPECTIVES (JOURNAL STYLE) --- */
+      .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+        overflow: hidden;
+      }
+      .carousel-track {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 10px 5px;
+        scrollbar-width: none;
+        width: 100%;
+      }
+      .carousel-track::-webkit-scrollbar { display: none; }
+
+      .journal-card { 
+        background: white; 
+        padding: 50px; 
+        border: 1px solid var(--border-color); 
+        flex: 0 0 calc(50% - 15px); /* 2 cards visible */
+        min-width: 0;
+      }
+      .journal-quote-icon { 
+        font-size: 2rem; 
+        color: var(--pisay-light-blue); 
+        margin-bottom: 25px; 
+      }
+      .journal-card p {
+        font-family: "Merriweather", serif;
+        font-style: italic;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-dark);
+        margin-bottom: 30px;
+      }
+      .journal-author { 
+        display: flex; 
+        align-items: center; 
+        gap: 15px; 
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+      }
+      .journal-author img { 
+        width: 50px; 
+        height: 50px; 
+        border-radius: 50%; 
+        object-fit: cover;
+      }
+      .author-name { 
+        display: block; 
+        font-weight: 700; 
+        color: var(--pisay-blue); 
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+      .author-meta { 
+        font-size: 0.8rem; 
+        color: var(--text-light); 
+      }
+      .carousel-controls {
+        display: flex;
+        gap: 10px;
+      }
+      .control-btn {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--border-color);
+        background: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--pisay-blue);
+        transition: 0.2s;
+      }
+      .control-btn:hover {
+        background: var(--pisay-blue);
+        color: white;
+      }
+
+      /* --- EVENTS --- */
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+      .event-card {
+        border: 1px solid var(--border-color);
+        background-color: white;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .event-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        border-bottom: 1px solid var(--border-color);
+        filter: grayscale(30%);
+      }
+      .event-body {
+        padding: 30px;
+      }
+      .event-date {
+        color: var(--pisay-red);
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .event-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: var(--text-dark);
+      }
+
+      /* --- NEW CTA SECTION (SPLIT LAYOUT) --- */
+      .cta-section {
+        background-color: var(--pisay-dark-blue);
+        padding: 0;
+      }
+      .cta-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 400px;
+      }
+      .cta-content {
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .cta-content h2 { color: white; margin-bottom: 20px; font-family: "Merriweather", serif; }
+      .cta-content p { color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-bottom: 35px; }
+      
+      .cta-image {
+        background: url('hero-reunion2.jpg') center/cover no-repeat;
+        position: relative;
+        min-height: 300px; /* Ensure height on mobile */
+      }
+      .cta-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 56, 168, 0.3); /* Blue tint */
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        background-color: var(--text-dark);
+        color: #cccccc;
+        padding: 60px 0 30px;
+        margin-top: auto;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+      .footer-brand h3 {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .footer-brand p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      .footer-col h4 {
+        color: var(--pisay-gold);
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+      .footer-links {
+        list-style: none;
+      }
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+      .footer-links a {
+        color: #cccccc;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: white;
+      }
+      .footer-bottom {
+        border-top: 1px solid #444;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        color: #888;
+      }
+
+      /* --- RESPONSIVE --- */
+      @media (max-width: 1024px) {
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          height: auto;
+          min-height: auto;
+        }
+        .hero-text-side {
+          padding: 60px 30px;
+          order: 2;
+        }
+        .hero-reunion-real {
+          height: 350px;
+          order: 1;
+        }
+        .about-container {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .metrics-grid {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .metric-item {
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 30px 0;
+        }
+        .metric-item:last-child {
+          border-bottom: none;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+        
+        /* Updates for Journal Cards Responsive */
+        .journal-card { flex: 0 0 100%; }
+        
+        /* Updates for CTA Responsive */
+        .cta-split { grid-template-columns: 1fr; }
+        .cta-content { padding: 60px 30px; text-align: center; }
+        .cta-content div { justify-content: center; }
+      }
+
+      @media (max-width: 768px) {
+        .header-actions a[href="#donate"] {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .carousel-wrapper {
+          flex-direction: column;
+        }
+        .carousel-track {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Pisayian Logo" />
+          <img src="text-logo.png" alt="" style="height: 2.5rem" />
+        </a>
+
+        <div class="header-right">
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#community">Community</a></li>
+              <li><a href="#events">Events</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <a
+              href="#donate"
+              style="
+                color: var(--text-dark);
+                font-weight: 700;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                margin-right: 10px;
+                text-decoration: none;
+              "
+              >Donate</a
+            >
+            <a href="#login" class="btn btn-outline" style="padding: 8px 16px"
+              >Login</a
+            >
+            <a href="#join" class="btn btn-red" style="padding: 8px 16px"
+              >Join</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-text-side">
+            <span class="eyebrow">Service Through Excellence</span>
+            <h1>Pisay Alumni, <br />United Worldwide.</h1>
+            <p>
+              The global community of Philippine Science High School alumni.
+              Dedicated to advancing STEM education, funding research, and
+              creating a legacy of service for the next generation of scholars.
+            </p>
+            <div style="display: flex; gap: 15px">
+              <a href="#join" class="btn btn-red">Become a Member</a>
+              <a href="#mission" class="btn btn-outline">Read Our Mission</a>
+            </div>
+          </div>
+
+          <div class="hero-reunion-side">
+            <img
+              src="school-image2.jpg"
+              alt="PSHS School Building"
+              class="hero-reunion-real"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2 class="section-title">Who We Are</h2>
+          <div class="divider"></div>
+          <div>
+            <p style="margin-bottom: 15px; color: var(--text-light)">
+              Driven by the need to support STEM education in the Philippines
+              and to foster fellowship among alumni across the world, a group of
+              alumni of the Philippine Science High School (PSHS) based in North
+              America established a nonprofit organization called the
+              <strong
+                >Philippine Science High School (PSHS) International Alumni
+                Foundation, Inc., </strong
+              >also known as "Pisayian". Pisayian is a nonprofit organization
+              recognized by the IRS under section 501(c)(3).
+            </p>
+            <p style="margin-bottom: 15px; color: var(--text-light)">
+              Membership is open to alumni from any campus of the PSHS system
+              who are either currently or formerly based in North America.
+            </p>
+            <a
+              href="#learn-more"
+              class="btn-link"
+              style="color: var(--pisay-red)"
+            >
+              Read our History <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="about-container">
+            <div class="about-image">
+              <img src="hero-reunion.jpg" alt="Foundation Activities" />
+            </div>
+            <div class="about-image">
+              <img src="hero-reunion2.jpg" alt="Foundation Activities" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="impact-metrics">
+        <div class="container">
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <h2>150+</h2>
+              <p>Scholars Supported</p>
+            </div>
+            <div class="metric-item">
+              <h2>3,000+</h2>
+              <p>Alumni Reached</p>
+            </div>
+            <div class="metric-item">
+              <h2>$500k</h2>
+              <p>Funds Raised</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="programs" class="bg-gray">
+        <div class="container">
+          <h2 class="section-title">Foundation Programs</h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">
+            Pisayian fulfills its mission through the distribution of grants and
+            the implementation of programs aligned with supporting the PSHS
+            system.
+          </p>
+
+          <div class="programs-grid">
+            <div class="program-card">
+              <div class="icon-label">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+              <h3>Program Grants</h3>
+              <p>
+                We distribute small grants to approved organizations, such as
+                the PSHS system, the PSHS National Alumni Association (PSHSNAA),
+                and the PSHS Foundation.
+              </p>
+              <a href="#" class="card-link">Contact Us</a>
+            </div>
+
+            <div class="program-card">
+              <div class="icon-label">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3>Scholarship Grants</h3>
+              <ul>
+                <li>Tuition/living expenses for PSHS students.</li>
+                <li>Support for competitions & conferences.</li>
+                <li>Professional development for faculty.</li>
+              </ul>
+              <a href="#" class="card-link">Apply Now</a>
+            </div>
+
+            <div class="program-card">
+              <div class="icon-label"><i class="fa-solid fa-globe"></i></div>
+              <h3>Pisay Network</h3>
+              <p>
+                Our exclusive online platform for alumni to find jobs, mentors,
+                and volunteer opportunities. Features a monthly talk series with
+                notable alumni.
+              </p>
+              <a href="#" class="card-link">Join Network</a>
+            </div>
+
+            <div class="program-card">
+              <div class="icon-label">
+                <i class="fa-solid fa-users-viewfinder"></i>
+              </div>
+              <h3>Mentoring Program</h3>
+              <p>
+                Find mentors by job function, industry, or location. Over 200
+                alumni have volunteered to serve as mentors to those seeking
+                career advice.
+              </p>
+              <a href="#" class="card-link">Find a Mentor</a>
+            </div>
+
+            <div class="program-card">
+              <div class="icon-label"><i class="fa-solid fa-flask"></i></div>
+              <h3>Research Science Institute</h3>
+              <p>
+                A collaboration with the CEE allowing a current PSHS junior to
+                attend RSI at MIT—arguably the most prestigious high school
+                research camp in the world.
+              </p>
+              <a href="#" class="card-link">Learn More</a>
+            </div>
+
+            <div class="program-card">
+              <div class="icon-label"><i class="fa-solid fa-atom"></i></div>
+              <h3>International Olympiads</h3>
+              <p>
+                Supporting students selected to represent the Philippines in
+                Bio, Chem, Math, Physics, Astronomy Olympiads and the ISEF.
+              </p>
+              <a href="#" class="card-link">Support Team</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" style="border-top: 1px solid var(--border-color);">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+            <div>
+              <h2 class="section-title" style="margin-bottom: 10px; text-align: left;">Alumni Perspectives</h2>
+              <div class="divider" style="margin: 0;"></div>
+            </div>
+            <div class="carousel-controls">
+              <button class="control-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="control-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+              <div class="journal-card">
+                <i class="fa-solid fa-quote-left journal-quote-icon"></i>
+                <p>"The rigorous training at PSHS prepared me for the challenges of leading global tech initiatives. Giving back to this institution is not an option; it is a professional duty."</p>
+                <div class="journal-author">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Maria Santos">
+                  <div>
+                    <span class="author-name">Dr. Maria Santos</span>
+                    <span class="author-meta">Class of 1995 • Senior Research Lead</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="journal-card">
+                <i class="fa-solid fa-quote-left journal-quote-icon"></i>
+                <p>"The Foundation provided the critical network required during my transition to North American academia. The mentorship program is world-class."</p>
+                <div class="journal-author">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Engr. Juan Dela Cruz">
+                  <div>
+                    <span class="author-name">Engr. Juan Dela Cruz</span>
+                    <span class="author-meta">Class of 2008 • Aerospace Engineer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="journal-card">
+                <i class="fa-solid fa-quote-left journal-quote-icon"></i>
+                <p>"Seeing our students win gold on the international stage is priceless. The support from the Foundation makes these victories possible."</p>
+                <div class="journal-author">
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Atty. Sarah Lim">
+                  <div>
+                    <span class="author-name">Atty. Sarah Lim</span>
+                    <span class="author-meta">Class of 2001 • Corporate Counsel</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="journal-card">
+                <i class="fa-solid fa-quote-left journal-quote-icon"></i>
+                <p>"The grants allowed my laboratory to upgrade essential equipment, directly fostering better education for current scholars."</p>
+                <div class="journal-author">
+                  <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Dr. Alex Reyes">
+                  <div>
+                    <span class="author-name">Dr. Alex Reyes</span>
+                    <span class="author-meta">Class of 1989 • University Professor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="bg-gray">
+        <div class="container">
+          <h2 class="section-title">Upcoming Events</h2>
+          <div class="divider"></div>
+
+          <div class="events-grid">
+            <div class="event-card">
+              <img src="1.avif" alt="Gala" class="event-img" />
+              <div class="event-body">
+                <span class="event-date">Feb 14, 2026</span>
+                <h4 class="event-title">
+                  Valentine's Day Ping Pong Social Boston
+                </h4>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-light);
+                    margin-bottom: 15px;
+                  "
+                >
+                  <i class="fa-solid fa-location-dot"></i> SPIN Boston, 30
+                  Melcher St, Boston, MA 02210, USA | 2:00 PM – 5:00 PM
+                </p>
+                <a href="#" class="card-link">Get Tickets</a>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <img src="2.avif" alt="Mentorship" class="event-img" />
+              <div class="event-body">
+                <span class="event-date">Nov 08, 2025</span>
+                <h4 class="event-title">Table Tennis FUNdraiser NYC</h4>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-light);
+                    margin-bottom: 15px;
+                  "
+                >
+                  <i class="fa-solid location-dot"></i> SPIN New York FlatIron,
+                  48 E 23rd St, New York, NY 10010, USA | 2:30 PM – 5:30 PM
+                </p>
+                <a href="#" class="card-link">Details</a>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <img src="3.jpg" alt="Homecoming" class="event-img" />
+              <div class="event-body">
+                <span class="event-date">Oct 11, 2025</span>
+                <h4 class="event-title">1sang Pisay 2025 Hartford</h4>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-light);
+                    margin-bottom: 15px;
+                  "
+                >
+                  <i class="fa-solid fa-location-dot"></i> Mark Twain House &
+                  Museum, 351 Farmington Ave, Hartford, CT 06105, USA | 3:00 PM
+                </p>
+                <a href="#" class="card-link">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center">
+            <a href="#" class="btn btn-outline">View All Events</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-split">
+          <div class="cta-content">
+            <h2>Advance the Mission</h2>
+            <p>Your contributions directly fund high-impact STEM programs, research grants, and scholarships for the next generation of global leaders.</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+              <a href="#" class="btn btn-gold">Make a Contribution</a>
+              <a href="#" class="btn btn-white">Formal Membership</a>
+            </div>
+          </div>
+          <div class="cta-image">
+            <div class="cta-overlay"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo" style="margin-bottom: 15px; display: flex; flex-direction: column; gap: 0;">
+              <img src="logo.png" alt="Logo" style="height: 100px" />
+              <img src="text-white.png" alt="" style="height: 30px">
+            </a>
+            <p>
+              Dedicated to advancing STEM education and creating a legacy of
+              service for the next generation of Filipino scholars.
+            </p>
+            <div style="margin-top: 20px">
+              <a
+                href="#"
+                style="color: white; margin-right: 15px; font-size: 1.2rem"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="#"
+                style="color: white; margin-right: 15px; font-size: 1.2rem"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="#"
+                style="color: white; margin-right: 15px; font-size: 1.2rem"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#programs">Programs & Grants</a></li>
+              <li><a href="#events">Upcoming Events</a></li>
+              <li><a href="#join">Membership</a></li>
+              <li><a href="#donate">Donate</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Get Involved</h4>
+            <ul class="footer-links">
+              <li><a href="#join">Become a Member</a></li>
+              <li><a href="#volunteer">Volunteer</a></li>
+              <li><a href="#network">Pisay Network</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i
+                  class="fa-solid fa-envelope"
+                  style="margin-right: 8px; width: 15px"
+                ></i>
+                contact@pisayian.org
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-location-dot"
+                  style="margin-right: 8px; width: 15px"
+                ></i>
+                1234 Alumni Way<br />San Francisco, CA 94103
+              </li>
+              <li>
+                <i class="fas fa-phone" ></i>
+                <span>+1 (555) 123-4567</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 PSHS International Alumni Foundation, Inc. All Rights
+            Reserved.
+          </p>
+          <div>
+            <a
+              href="#"
+              style="color: #888; text-decoration: none; margin-left: 20px"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              style="color: #888; text-decoration: none; margin-left: 20px"
+              >Terms of Use</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const track = document.getElementById("carouselTrack");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      // Function to get dynamic scroll width
+      function getScrollAmount() {
+        const card = track.querySelector(".journal-card");
+        const gap = 30; // Matches the CSS gap
+        return card.getBoundingClientRect().width + gap;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        track.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+      });
+
+      prevBtn.addEventListener("click", () => {
+        track.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
